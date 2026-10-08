@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-xl rounded-2xl;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background: linear-gradient(135deg, #1e003a, #4a0080, #c70066, #ff4000);
+  background-size: 400% 400%;
+  animation: gradientBG 20s ease infinite;
+  color: #fff;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
