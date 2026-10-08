@@ -21,7 +21,7 @@ function App() {
   // Cargar categorías
   useEffect(() => {
     if (pantallaActual === 'categorias' && categorias.length === 0) {
-      axios.get('http://localhost:8000/api/categorias/')
+      axios.get('https://laurissssss.pythonanywhere.com/api/categorias/')
         .then(res => setCategorias(res.data))
         .catch(err => console.error('Error cargando categorías:', err));
     }
@@ -54,7 +54,7 @@ function App() {
 
 
   const seleccionarCategoria = (idCategoria) => {
-    axios.get(`http://localhost:8000/api/preguntas/${idCategoria}/`)
+    axios.get(`https://laurissssss.pythonanywhere.com/api/preguntas/${idCategoria}/`)
       .then(res => {
         setPreguntas(res.data);
         setIndicePregunta(0);
